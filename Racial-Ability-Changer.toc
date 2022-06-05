@@ -1,0 +1,6 @@
+## Interface: 90205
+## Version: 1.0
+## Title: Racial Ability Changer
+## Author: AyJayCoding
+## Notes: Automatically updates the content of a macro with the corresponding racial abilities of a character
+code.lua
