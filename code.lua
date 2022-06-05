@@ -1,15 +1,15 @@
--- This file is loaded from "Racial-Ability-Changer.toc"
+-- This file is loaded from "Racial-Ability-Macro-Changer.toc"
 do
 
 	-- Setting up string for console output
-	local RACADDON_CHAT_TITLE = "|CFF9482C9Racial Ability Changer:|r "
+	local RAMCADDON_CHAT_TITLE = "|CFF9482C9Racial Ability Macro Changer:|r "
 
 	local RacialAbilityChangerMacroIcon = CreateFrame("Frame");
 	RacialAbilityChangerMacroIcon:RegisterEvent("PLAYER_LOGIN");
 	RacialAbilityChangerMacroIcon:SetScript("OnEvent",function(self,event,...)
 	
 		if event == "PLAYER_LOGIN" then
---				print(string.format("%sUpdating macro",RACADDON_CHAT_TITLE));
+--				print(string.format("%sUpdating macro",RAMCADDON_CHAT_TITLE));
 			local macroStr;
 			
 			local numMacros = GetNumMacros();
@@ -17,7 +17,7 @@ do
 	
 			for i=1, numMacros do
 				local name = GetMacroInfo(i)
-				if name == "RACbutton" then
+				if name == "RAMCbutton" then
 					foundMacro = true;
 				end		
 			end
@@ -75,13 +75,13 @@ do
 			end
 
 			if foundMacro == true then
-				EditMacro("RACbutton", "RACbutton", nil, macroStr, 1, nil);
+				EditMacro("RAMCbutton", "RAMCbutton", nil, macroStr, 1, nil);
 			else
-				print(string.format("%sExisitng macro for racial ability not found. Creating new one...",RACADDON_CHAT_TITLE));
+				print(string.format("%sExisitng macro for racial ability not found. Creating new one...",RAMCADDON_CHAT_TITLE));
 				if numMacros < MAX_ACCOUNT_MACROS then
-					CreateMacro("RACbutton", "INV_MISC_QUESTIONMARK", macroStr, nil);
+					CreateMacro("RAMCbutton", "INV_MISC_QUESTIONMARK", macroStr, nil);
 				else
-					print(string.format("%sCould not create macro for racial ability. Macro limit reached.",RACADDON_CHAT_TITLE));
+					print(string.format("%sCould not create macro for racial ability. Macro limit reached.",RAMCADDON_CHAT_TITLE));
 				end
 			end
 		end
