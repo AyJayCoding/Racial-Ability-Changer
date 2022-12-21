@@ -72,6 +72,8 @@ do
 				macroStr = macroStr.."Ancestral Call";
 			elseif raceID == 37 then -- Check if race is mechagnome
 				macroStr = macroStr.."[mod:alt] Skeleton Pinkie; Hyper Organic Light Originator";
+			elseif (raceID == 52 or raceID == 70) then -- Check if race is dracthyr (alliance, horde)
+				macroStr = macroStr.."[mod:altctrl] Visage; [mod:ctrl] Soar; [mod:alt] Tail Swipe; Wing Buffet";
 			end
 
 			if foundMacro == true then

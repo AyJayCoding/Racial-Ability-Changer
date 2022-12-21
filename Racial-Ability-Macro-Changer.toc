@@ -1,5 +1,5 @@
-## Interface: 90207
-## Version: 1.0.1
+## Interface: 100002
+## Version: 1.0.2
 ## Title: Racial Ability Macro Changer
 ## Author: AyJayCoding
 ## Notes: Automatically updates the content of a macro with the corresponding racial abilities of a character
